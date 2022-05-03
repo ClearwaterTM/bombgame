@@ -1,0 +1,14 @@
+#Nombre de joueurs humains.
+2
+#Nombre de joueurs ordinateurs. Il doit y avoir au moins 2 joueurs sur le plateau (nombre de joueurs humains + nombre de joueurs ordinateurs).
+0
+#Taille du plateau de jeu. Doit etre entre 3 et 20.
+7
+#Durée de vie d'une bombe. Doit etre entre 5 et 15.
+6
+#Energie de départ de chaque joueur. Doit etre entre 25 et 100.
+25
+#Le nombre d'obstacles à placer sur le plateau.
+4
+#Le nombre de zones d'énergie à placer sur le plateau.
+8

@@ -1,0 +1,52 @@
+<!-- Apache ANT compilation script for the project.
+
+This script contains x functions for project compilation:
+clean: deletes any existing builds of the project, used as cleanup prior to a new compilation.
+compile: Compiles a new build of the project using all source code files, and drops the compiled class files into /build/classes.
+jar: Compiles the built project into a .jar file, and drops it in dist/jar .
+run: Launches the project by running the entry point in the compiled .jar file. -->
+
+
+<project>
+
+    <target name="clean">
+        <delete dir="./build/"> </delete>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="./build/classes"/>
+        <javac srcdir="src" destdir="./build/classes"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="dist/jar"/>
+        <jar
+		destfile="./dist/Game.jar"
+		basedir="./build/classes"
+		includes="**/*.class"
+		excludes="Game.jar"
+		>
+            <manifest>
+                <attribute name="Main-Class" value="lanceur.Main"/>
+            </manifest>
+        </jar>
+		
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="./dist/Game.jar" fork="true">
+		</java>	
+    </target>
+	
+	<target name="javadoc">
+		<javadoc sourcepath="./src" destdir="./doc">
+			<fileset dir="./src" defaultexcludes="yes">
+			<include name="*.java"/>
+			</fileset>
+		</javadoc>
+		
+	</target>
+	
+	
+
+</project>
