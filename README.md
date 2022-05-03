@@ -1,21 +1,9 @@
-******
-METHODES DE CONCEPTION - Daniel MURRAY, Jules ROCHE, Joshua AUBRY, Océane PERROUAULT
-*****
+# Java bomb game
 
-**
-Compilation:
+A group project I participated in during the third year of my comsci studies at university.
 
-Ouvrez un terminal, et taper le suivant:
+# Installation:
 
-ant jar
-
-Le script ANT va compiler tous les fichiers code source et le compilera en fichier .jar, qui sera ensuite placé dans build/jar.
-
-**
-Exécution:
-
-Ouvrez un terminal, et taper le suivant:
-
-ant run
-
-Le jeu va s'exécuter sur l'interface graphique, avec le plateau et d'autres informations importantes affichés en console.
+Clone the repo: `git pull https://github.com/ClearwaterTM/bombgame` \
+Build the game .jar from the ANT script: `ant jar`
+Open the game: `ant run`
